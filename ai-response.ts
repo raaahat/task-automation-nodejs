@@ -7,22 +7,18 @@ dotenv.config();
 const filePath = path.join(__dirname, 'input.txt');
 const basePrompt: string = fs.readFileSync(filePath, 'utf-8');
 
-console.log(basePrompt);
-
 const anthropic = new Anthropic({
   apiKey: process.env.API_KEY,
 });
 
 const prompt =
-  'theboxlog.com, birdievc.com, phoenixbox.co.uk, encosmart.com, avanzit.ma';
-// const prompt =
-//   'xiaoxiangmei.com,requantive.com, liveable.squarespace.com, shellbridge.ca, t2ab.vc, material.ventures, gracehallpartners.com, vrai.com.au, ninofood.com, sohotechlab.com, mediafactorymedia.wordpress.com, nordainvest.com, retirementdecisioncoach.com, shusfuss.com, agence-k.fr, eloopz.com, alpinevisionary.com, spaineta.lv, rg-groupe.fr, kapture.vc, archstarcap.com, mondialas.com.tr, faconfection.com, ccgabriel.com, twowaylabs.com, tophat-capital.com, nextclass.ai, incahoot.co.uk, puenteventures.com, spooma.com,mannacappartners.com, shelburneassociates.com, agilerl.com, theboxlog.com, birdievc.com, phoenixbox.co.uk, encosmart.com, avanzit.ma, hopschool.hu, grandferrycapital.com, impactbpo.com sr-financial-systems.com, ezy.fund, tavistock.xyz, merandpharma.com, prathventures.com, xingzheai.com.cn, veritecventures.com, easyonline.za.com, compassbeauty.com, above all websites write 20-30 word about information in english and also create a link of last of description with company name. please complete all 50 sites at once dont ask for continue or need more. if there adult, porn, sex, escort, and  Alcoholic related site remove it from list. Please write in English language.';
+  'bromeepartners.se, shis.com.sa, gdalternativeliving.net, darthkitchens.com, sipoonkiinteistohuolto.fi, implement.io, khlcap.com, janakbalan.com, loyaltycaravan.com, fixer-app.co, secureyou24.com, professionalsitesllc.com, brickstreetfund.com, sigmaengineparts.com, outpostventures.vc, swishapp.me, ivy-x.com, sxjg-sps.com, hssystem.cn, monarchbio.com, treat.io, idhdentalacquisitions.co.uk, sienzausa.com, rentflyscooters.com, spinach-vanilla-w88g.squarespace.com, kometgames.com, swhais.com, totalsanitation.com, interlakentx.com, meloaudio.com.cn, machine.healthcare, blackstar.capital, flightlevellakeland.com, discoverylabservices.com, extremedivers.net, nationalcreditacceptance.net, dwaynehayes.com, mmvinvestments.com, optiquexr.com, networkventures.com, 3bodygame.com, averybio.com, devcapfund.com, evergreenvc.co, kivid.com.br, asicflag.com, earshotmp.com, sgbiojv.com.br, homepreviewchannel.com, poplarsnursery.co.uk';
 
 async function askAI(prompt: string): Promise<void> {
   try {
     const msg = await anthropic.messages.create({
-      model: 'claude-3-5-haiku-20241022',
-      max_tokens: 1024,
+      model: 'claude-3-5-sonnet-20240620',
+      max_tokens: 8000,
       messages: [
         { role: 'assistant', content: basePrompt },
         { role: 'user', content: prompt },
@@ -31,7 +27,7 @@ async function askAI(prompt: string): Promise<void> {
     //@ts-ignore
     const aiResponse = msg.content?.[0]?.text ?? ''; // Safely access the text
 
-    await fs.promises.writeFile('output.md', aiResponse, 'utf-8');
+    await fs.promises.writeFile('51-100.md', aiResponse, 'utf-8');
     console.log('File saved!');
     console.log(msg);
   } catch (error) {
