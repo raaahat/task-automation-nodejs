@@ -1,7 +1,9 @@
 import { google } from 'googleapis';
-
+import * as fs from 'fs';
+import * as path from 'path';
 const documentId = '1OdAijhUJUrpklsgR-SbLAT9-xhbxxxLAxPWoOj3rYIQ'; // Replace with your real doc ID
-const text = 'Welcome to Google Docs';
+const filePath = path.join(__dirname, 'output.md');
+const text = fs.readFileSync(filePath, 'utf-8');
 
 async function writeTextToDoc() {
   const auth = new google.auth.GoogleAuth({

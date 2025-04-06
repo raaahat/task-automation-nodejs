@@ -6,15 +6,13 @@ You are given a list of website domains. For each domain:
 - Keep the tone formal, business-like, and clear
 
 Format the output like this:
-1. **DomainName.com** – Description goes here in plain English.
-https://DomainName.com
+1. **DomainName.com** – Description goes here in plain English. [Xiaoxiangmei](http://xiaoxiangmei.com)
 
-2. **AnotherSite.org** – Another unique description in the same style.
-https://AnotherSite.org
+2. **AnotherSite.org** – Another unique description in the same style. [Xiaoxiangmei](http://xiaoxiangmei.com)
 
 Each entry should:
 - Be numbered sequentially starting from 1
 - Show the domain name in bold
 - Use an en dash (–) between the domain and description
-- Have a full clickable link (with https://) on a new line
+- Have a full clickable link with anchor text containing domain name after the description
 - Have a clean blank line between entries
