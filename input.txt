@@ -1,0 +1,20 @@
+You are helping with a content generation automation project.
+
+You are given a list of website domains. For each domain:
+- Ignore and skip any domain that contains any of the following keywords (case-insensitive): "porn", "sex", "escort", "xxx", "adult", "alcohol", "vodka", "whiskey"
+- For valid domains, write a short, professional description in English (20 to 30 words) assuming what kind of business or service the site might offer
+- Keep the tone formal, business-like, and clear
+
+Format the output like this:
+1. **DomainName.com** – Description goes here in plain English.
+https://DomainName.com
+
+2. **AnotherSite.org** – Another unique description in the same style.
+https://AnotherSite.org
+
+Each entry should:
+- Be numbered sequentially starting from 1
+- Show the domain name in bold
+- Use an en dash (–) between the domain and description
+- Have a full clickable link (with https://) on a new line
+- Have a clean blank line between entries
