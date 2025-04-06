@@ -12,7 +12,7 @@ const anthropic = new Anthropic({
 });
 
 const prompt =
-  'bromeepartners.se, shis.com.sa, gdalternativeliving.net, darthkitchens.com, sipoonkiinteistohuolto.fi, implement.io, khlcap.com, janakbalan.com, loyaltycaravan.com, fixer-app.co, secureyou24.com, professionalsitesllc.com, brickstreetfund.com, sigmaengineparts.com, outpostventures.vc, swishapp.me, ivy-x.com, sxjg-sps.com, hssystem.cn, monarchbio.com, treat.io, idhdentalacquisitions.co.uk, sienzausa.com, rentflyscooters.com, spinach-vanilla-w88g.squarespace.com, kometgames.com, swhais.com, totalsanitation.com, interlakentx.com, meloaudio.com.cn, machine.healthcare, blackstar.capital, flightlevellakeland.com, discoverylabservices.com, extremedivers.net, nationalcreditacceptance.net, dwaynehayes.com, mmvinvestments.com, optiquexr.com, networkventures.com, 3bodygame.com, averybio.com, devcapfund.com, evergreenvc.co, kivid.com.br, asicflag.com, earshotmp.com, sgbiojv.com.br, homepreviewchannel.com, poplarsnursery.co.uk';
+  'hasscomedical.com, haiqu.ai, gmpcs.com, allglory.gg, clearifiedenergy.com, bericagiochi.com, 5starmobiles.com, desideriusventures.com, hmgroupventures.com, jasmyfoundation.com, vestrian.com, jsrefining.com, chicagopolandventures.com, gdaluma.com, cottoncapitaladvisors.com, xavaavcapital.com, weiavr.com, tegnhuset.no, gcnhub.com, precogn.fr, consilientlabs.io, putifer.nl, candyvc.co, thesupr.co, peindustrial.it, bluskyinnovations.com, zmjcloud.com, starglowmedia.com, emccapital.uk, sebrae-rs.com, baobeimt.com,';
 
 async function askAI(prompt: string): Promise<void> {
   try {
@@ -27,7 +27,7 @@ async function askAI(prompt: string): Promise<void> {
     //@ts-ignore
     const aiResponse = msg.content?.[0]?.text ?? ''; // Safely access the text
 
-    await fs.promises.writeFile('51-100.md', aiResponse, 'utf-8');
+    await fs.promises.appendFile('51-100.md', aiResponse, 'utf-8');
     console.log('File saved!');
     console.log(msg);
   } catch (error) {
